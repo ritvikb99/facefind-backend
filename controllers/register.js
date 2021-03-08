@@ -30,7 +30,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             hash: hash,
             email: email,
           })
-          .catch((err) => console.log(err));
+          .catch((err) => res.status(400).json('unable-to-register'));
       }
     });
 };
