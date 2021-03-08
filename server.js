@@ -41,8 +41,8 @@ app.put('/image', (req, res) => {
   image.handleImage(req, res, db);
 });
 
-app.listen(3000, () => {
-  console.log('Started listening on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Started listening on port ${process.env.PORT}`);
 });
 
 /* API PLAN
