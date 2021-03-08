@@ -11,7 +11,9 @@ const db = knex({
   client: 'pg',
   connection: {
     connectionString: process.env.DATABASE_URL, // localhost
-    ssl: true,
+    ssl: {
+      rejectUnauthorized: false,
+    },
     /* user: 'postgres',           //For localhost
     password: 'tanumanu',
     database: 'facefind', */
